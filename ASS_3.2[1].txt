@@ -1,0 +1,147 @@
+1)   The output of the code will be 14.
+In the line x=arr[1]+(arr[1]=2);, the expression arr[1]=2 assigns the value 2 to the second element of the array arr, which is 12. This expression evaluates to the value 2.
+Then, the value of the second element of the array arr is added to the value of 2, which is 12+2=14.
+Finally, the value of x is assigned to 14, and it is printed using the printf statement.
+
+
+2)
+he given code will not compile due to the following error: "undefined reference to f'". This is because the function fis used in the main function before it is defined. To fix this, we can either move the definition of theffunction above themain` function or declare the function prototype at the beginning of the code.
+Assuming we add the function prototype at the beginning of the code, the corrected code with the expected output is as follows:
+
+#include<stdio.h>
+#include<conio.h>
+
+int f(int num);
+
+void main(){
+    int i=3,val;
+    val=sizeof f(i)+ +f(i=1)+ +f(i-1);
+    printf("%d %d",val,i);
+}
+
+int f(int num){
+    return num*5;
+}
+
+Output:
+
+20 1
+Explanation:
+i is initialized to 3.
+f(i) is called, which evaluates to i*5, or 3*5=15. The sizeof operator returns the size of the type of its operand, which is the type of the result of f(i). On most machines, the size of an int is 4 bytes, so `sizeof
+
+
+
+
+
+3)The output of the program will be:-2.333333
+Explanation:
+
+The main function initializes the variables p, q, and r to 1, 2, and -2 respectively.
+The expression (q=4,r=-12,q) is evaluated as follows:
+q is first set to 4.
+r is then set to -12.
+Finally, the expression evaluates to the value of q, which is 4.
+The avg function is called with the values p, q, and r.
+In the avg function, the values of x, y, and z are 1, 4, and -12 respectively.
+The function computes the average of these values, which is -2.333333.
+This value is stored in the variable a.
+The printf function is then called to print the value of a to the console.
+
+
+
+
+
+
+
+
+
+4)   This program will likely result in a segmentation fault or undefined behavior, because it is trying to modify a constant integer pointer p by incrementing the value it points to (*p).
+Here, int const *p declares a pointer p to a constant integer. The value 5 is assigned to this pointer, which is a constant value, and should not be modified.
+Then, the ++(*p) statement tries to increment the value pointed by p. However, since p is a pointer to a constant integer, attempting to modify the value it points to results in undefined behavior, which in this case, can result in a segmentation fault.
+int x = 5;
+int const * p = &x;
+printf("%d", ++(*p));
+
+
+
+
+5)This program will compile without any errors, but the output may not be as expected due to the initialization of the array c with floating-point numbers and the incorrect use of pointers p and q.
+When we initialize the array c with floating-point numbers, they will be implicitly converted to integers. So the array will actually contain {2, 3, 4, 6, 5}.
+In the first loop, the ++q operation increments the pointer q, which points to the same array as c, and the value of the current element is printed using *c. So, for each iteration of the loop, the output will print the value of the first element of the array, i.e., 2.
+In the second loop, the ++p operation increments the pointer p, which is initialized to point to the first element of the array c. So, for each iteration of the loop, the value of the next element in the array is printed. So, the output of the second loop will be 2 3 4 6 5.
+
+
+
+6)This program will compile without any errors, but the output may not be as expected due to the initialization of the array c with floating-point numbers and the incorrect use of pointers p and q.
+When we initialize the array c with floating-point numbers, they will be implicitly converted to integers. So the array will actually contain {2, 3, 4, 6, 5}.
+In the first loop, the ++q operation increments the pointer q, which points to the same array as c, and the value of the current element is printed using *c. So, for each iteration of the loop, the output will print the value of the first element of the array, i.e., 2.
+In the second loop, the ++p operation increments the pointer p, which is initialized to point to the first element of the array c. So, for each iteration of the loop, the value of the next element in the array is printed. So, the output of the second loop will be 2 3 4 6 5.
+
+
+
+
+7)#include <stdio.h>
+
+int main() {
+    int n = 5;
+    int i, j;
+    for(i = 1; i <= n; i++) {
+        for(j = i; j <= n; j++) {
+            printf("  ");
+        }
+        for(j = 1; j <= i; j++) {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+8)
+#include <stdio.h>
+
+int main() {
+    int N, x, i;
+    printf("Enter the size of the array: ");
+    scanf("%d", &N);
+    int arr[N];
+    printf("Enter the elements of the array: ");
+    for (i = 0; i < N; i++) {
+        scanf("%d", &arr[i]);
+    }
+    printf("Enter the element to search: ");
+    scanf("%d", &x);
+    for (i = 0; i < N; i++) {
+        if (arr[i] == x) {
+            printf("The index of the first occurrence of %d is %d\n", x, i);
+            return 0;
+        }
+    }
+    printf("%d is not present in the array.\n", x);
+    return -1;
+}
+
+
+
+
+9) 
+
+The output of this C program is unpredictable and may result in a segmentation fault or unexpected behavior.
+The memchr() function is used to search for a specific character in a block of memory. In this program, it is used to search for the character 'u' in the memory block pointed to by the pointer p1, which is pointing to an instance of the STU1 struct.
+The problem with this usage is that memchr() expects the memory block to be a contiguous block of bytes, but the STU1 struct contains non-character data (the marks field, which is a double). This means that the memchr() function may return a pointer to a memory location that does not contain a null-terminated string, which will cause the printf() function to continue printing characters from memory until it encounters a null byte, resulting in undefined behavior.
+To fix this issue, you should only use memchr() to search within the name1 and name2 fields of the STU1 struct, and not search across the entire struct. Additionally, you should ensure that the result of memchr() is not NULL before passing it to printf().
+
+
+
+
+
+
+10)
+
+
+The output of the program will be:64
+This is because the macro square(x) is defined as x*x. So when square(4) is called in the statement i = 64/square(4), it gets replaced by 4*4 by the preprocessor, resulting in the expression i = 64/4*4.
+According to the operator precedence rules in C, division and multiplication have the same precedence and are evaluated from left to right. So the expression is equivalent to (64/4)*4, which evaluates to 16*4 and finally 64.
+The value of i is then printed using the printf statement, resulting in the output 64
