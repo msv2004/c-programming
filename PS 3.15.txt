@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    int size_a, size_b, size_c, i, j;
+    
+    printf("Enter number of elements in array A: ");
+    scanf("%d", &size_a);
+    int arr_a[size_a];
+    printf("Enter elements: ");
+    for (i = 0; i < size_a; i++) {
+        scanf("%d", &arr_a[i]);
+    }
+    
+    printf("Enter number of elements in array B: ");
+    scanf("%d", &size_b);
+    int arr_b[size_b];
+    printf("Enter elements: ");
+    for (i = 0; i < size_b; i++) {
+        scanf("%d", &arr_b[i]);
+    }
+    
+    size_c = size_a + size_b;
+    int arr_c[size_c];
+    
+    // Copy elements from array A to array C
+    for (i = 0; i < size_a; i++) {
+        arr_c[i] = arr_a[i];
+    }
+    
+    // Copy elements from array B to array C
+    for (i = 0, j = size_a; i < size_b; i++, j++) {
+        arr_c[j] = arr_b[i];
+    }
+    
+    printf("\nMerged array C:\n");
+    for (i = 0; i < size_c; i++) {
+        printf("%d ", arr_c[i]);
+    }
+    
+    return 0;
+}

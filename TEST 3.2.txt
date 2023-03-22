@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int A, m, n, o;
+    printf("Enter a limit A: ");
+    scanf("%d", &A);
+    printf("Pythagorean triples with a value smaller than %d:\n", A);
+    for (m = 1; m <= A; m++) {
+        for (n = 1; n < m; n++) {
+            o = sqrt(m * m + n * n);
+            if (o > A) {
+                break;
+            }
+            if (m * m + n * n == o * o) {
+                printf("(%d,%d,%d) ", n, m, o);
+            }
+        }
+    }
+    if(n>0 && m>0 && o>o){
+         printf("\n");
+    }
+    else {
+        printf("there is no triplets for negative values");
+    }
+    return 0;
+}

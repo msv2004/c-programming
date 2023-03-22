@@ -1,0 +1,120 @@
+1.Compile and Execute the C program were the user to enter an integer to compute the
+square, cube of the given decimal number using standard method.
+
+#include <stdio.h>
+int main()
+{
+    float n;
+    printf("Enter the value of n");
+    scanf("%f", &n);
+    
+    printf("The square of the given decimal value is %f",n*n);
+    printf("The cube of the given decimal value is %f",n*n*n);
+    
+    return 0;
+}
+
+2. A Pythagorean Triplet is a set of three integers m, n and o such that m2+n2=o2.
+Given a limit A, generate all Pythagorean triples with value smaller that given limit A?
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int A, m, n, o;
+    printf("Enter a limit A: ");
+    scanf("%d", &A);
+    printf("Pythagorean triples with a value smaller than %d:\n", A);
+    for (m = 1; m <= A; m++) {
+        for (n = 1; n < m; n++) {
+            o = sqrt(m * m + n * n);
+            if (o > A) {
+                break;
+            }
+            if (m * m + n * n == o * o) {
+                printf("(%d,%d,%d) ", n, m, o);
+            }
+        }
+    }
+    if(n>0 && m>0 && o>o){
+         printf("\n");
+    }
+    else {
+        printf("there is no triplets for negative values");
+    }
+    return 0;
+}
+
+
+
+3. A year has 365 days but leap year consists of 366 days. This one day is added in the month
+of February. This month which generally has 28 days and also known as the shortest
+month in a year would get added with an extra day, which gives us a total of 29 days in
+that month. It is based on the Georgian calendar. Compile and Execute the C program
+for checking out whether a given year is a leap year or not.
+
+
+
+
+#include <stdio.h>
+int main() {
+   int year;
+   printf("Enter a year: ");
+   scanf("%d", &year);
+
+   if (year % 400 == 0) {
+      printf("%d is a leap year.", year);
+   }
+
+   else if (year % 100 == 0) {
+      printf("%d is not a leap year.", year);
+   }
+
+   else if (year % 4 == 0) {
+      printf("%d is a leap year.", year);
+   }
+   else {
+      printf("%d is not a leap year.", year);
+   }
+
+   return 0;
+}
+
+
+
+
+4. Ask the user to enter any positive integer. Compile and Execute the C program to check
+whether the number is Strong number or not.
+
+
+
+#include <stdio.h>
+
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n-1);
+    }
+}
+
+int main() {
+    int n, o, sum = 0, digit;
+
+    printf("Enter the number to check for strong number: ");
+    scanf("%d", &n);
+
+    o = n;
+
+    while (n != 0) {
+        digit = n % 10;
+        sum += factorial(digit);
+        n /= 10;
+    }
+    if (sum == o) {
+        printf("%d is a strong number.\n", o);
+    } else {
+        printf("%d is not a strong number.\n", o);
+    }
+    return 0;
+}
