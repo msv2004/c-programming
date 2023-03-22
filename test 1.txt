@@ -7,11 +7,7 @@ int main() {
 
         printf("enter the value of n:");
         scanf("%d",&n);
-    
-    
-    
-    
-    int a;
+        int a;
     
     printf("Select the Opertator:Pow(1),Add(2),Sub(3),Mul(4),Div(5)");
     scanf("%d",&a);
@@ -29,7 +25,6 @@ int main() {
     }
     else if(a==3) {
 
-
         int sub = x-n;
         printf("subtraction of given no: %d",sub);
 
@@ -42,7 +37,6 @@ int main() {
     }
     else if(a==5) {
        
-
         int div = x/n;
         printf("Divison of given no: %d",div);
 
