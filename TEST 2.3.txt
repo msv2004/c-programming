@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int m, n, i;
+
+    printf("Enter the value of m: ");
+    scanf("%d", &m);
+
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    for(i=1; i<=n; i++) {
+        printf("%dx%d=%d\n", i, m, i*m);
+    }
+
+    return 0;
+}

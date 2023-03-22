@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+     int x,n;
+        printf("enter the value of x:");
+        scanf("%d",&x);
+
+        printf("enter the value of n:");
+        scanf("%d",&n);
+   
+   
+   
+   
+    int a;
+   
+    printf("Select the Opertator:Pow(1),Add(2),Sub(3),Mul(4),Div(5)");
+    scanf("%d",&a);
+
+    if(a==1) {
+       
+        int power = pow(x,n);
+        printf("Powers of the given no: %d",power);
+    }
+    else if(a==2) {
+
+        int add = x+n;
+        printf("Addition of given no: %d",add);
+
+    }
+    else if(a==3) {
+
+
+        int sub = x-n;
+        printf("subtraction of given no: %d",sub);
+
+    }
+    else if(a==4) {
+   
+        int mult = x*n;
+        printf("Multiplication of given no: %d",mult);
+
+    }
+    else if(a==5) {
+       
+
+        int div = x/n;
+        printf("Divison of given no: %d",div);
+
+    }
+    else {
+        printf("You have entered wrong no");
+    }
+    return 0;
+}
