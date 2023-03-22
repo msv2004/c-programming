@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char names[5][20], temp[20];
+    int i, j, n;
+    char order;
+
+    printf("Enter the number of names to sort (maximum 5): ");
+    scanf("%d", &n);
+
+    printf("Enter %d names:\n", n);
+    for(i = 0; i < n; i++) {
+        scanf("%s", names[i]);
+    }
+
+    printf("Enter the order (A for ascending, D for descending): ");
+    scanf(" %c", &order);
+
+    // Bubble sort algorithm
+    for(i = 0; i < n-1; i++) {
+        for(j = 0; j < n-i-1; j++) {
+            if(order == 'A') {
+                if(strcmp(names[j], names[j+1]) > 0) {
+                    strcpy(temp, names[j]);
+                    strcpy(names[j], names[j+1]);
+                    strcpy(names[j+1], temp);
+                }
+            } else if(order == 'D') {
+                if(strcmp(names[j], names[j+1]) < 0) {
+                    strcpy(temp, names[j]);
+                    strcpy(names[j], names[j+1]);
+                    strcpy(names[j+1], temp);
+                }
+            }
+        }
+    }
+
+    printf
