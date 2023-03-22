@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n-1);
+    }
+}
+
+int main() {
+    int n, o, sum = 0, digit;
+
+    printf("Enter the number to check for strong number: ");
+    scanf("%d", &n);
+
+    o = n;
+
+    while (n != 0) {
+        digit = n % 10;
+        sum += factorial(digit);
+        n /= 10;
+    }
+    if (sum == o) {
+        printf("%d is a strong number.\n", o);
+    } else {
+        printf("%d is not a strong number.\n", o);
+    }
+    return 0;
+}
