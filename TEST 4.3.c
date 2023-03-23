@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int n = sizeof(arr)/sizeof(arr[0]);
     int temp;
 
