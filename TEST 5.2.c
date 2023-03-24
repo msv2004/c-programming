@@ -57,11 +57,36 @@ int main() {
 }
 
 //OUTPUT:
+//TEST CASES:
+Enter the marks in Python: 18
+Enter the marks in C programming: 76
+Enter the marks in Mathematics: 93
+Enter the marks in Physics: 65
+Total= 252
+Aggregate = 63.0
+FIRST DIVISION
 
-Enter the marks in Python: 85
-Enter the marks in C programming: 99
-Enter the marks in Mathematics: 88
-Enter the marks in Physics: 77
-Total= 349
-Aggregate = 87.2
+Enter the marks in Python: 73
+Enter the marks in C programming: 78
+Enter the marks in Mathematics: 79
+Enter the marks in Physics: 75
+Total= 305
+Aggregate = 76.2
 DISTINCTION
+
+Enter the marks in Python: 96
+Enter the marks in C programming: 73
+Enter the marks in Mathematics: -85
+Enter the marks in Physics: 95
+Total= 179
+Aggregate = 44.8
+THIRD DIVISION
+
+Enter the marks in Python: 78
+Enter the marks in C programming: 59.5
+Enter the marks in Mathematics: 76
+Enter the marks in Physics: 79
+Total= 292
+Aggregate = 73.1
+FIRST DIVISION
+
