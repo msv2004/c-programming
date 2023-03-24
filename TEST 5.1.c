@@ -18,7 +18,7 @@ int main() {
         scanf("%d", &arr[i]);
     }
     bubble_sort(arr, n);
-    printf("Sorted array:\n");
+    printf("OUTPUT:\n");
     for (i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
