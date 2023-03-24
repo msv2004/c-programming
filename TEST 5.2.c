@@ -1,4 +1,4 @@
- #include <stdio.h>
+#include <stdio.h>
 
 int main() {
     float python_marks, c_marks, math_marks, physics_marks, total, aggregate;
@@ -58,6 +58,14 @@ int main() {
 
 //OUTPUT:
 //TEST CASES:
+Enter the marks in python: 90
+Enter the marks in c programming: 91
+Enter the marks in Mathematics: 92
+Enter the marks in Physics: 93
+Total= 366
+Aggregate = 91.5
+DISTINCTION
+
 Enter the marks in Python: 18
 Enter the marks in C programming: 76
 Enter the marks in Mathematics: 93
